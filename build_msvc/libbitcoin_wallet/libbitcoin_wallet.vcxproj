@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\common.init.vcxproj" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{93B86837-B543-48A5-A89B-7C87ABB77DF2}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\src;..\..\src\univalue\include;..\..\src\secp256k1\include;..\..\src\leveldb\include;..\..\src\leveldb\helpers\memenv;%(AdditionalIncludeDirectories);../../x64-windows-static/include;;../../x64-windows-static/include;</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\src;..\..\src\univalue\include;..\..\src\secp256k1\include;..\..\src\leveldb\include;..\..\src\leveldb\helpers\memenv;%(AdditionalIncludeDirectories);../../x64-windows-static/include;</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\src;..\..\src\univalue\include;..\..\src\secp256k1\include;..\..\src\leveldb\include;..\..\src\leveldb\helpers\memenv;%(AdditionalIncludeDirectories);../../x64-windows-static/include;</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\src;..\..\src\univalue\include;..\..\src\secp256k1\include;..\..\src\leveldb\include;..\..\src\leveldb\helpers\memenv;%(AdditionalIncludeDirectories);../../x64-windows-static/include;;../../x64-windows-static\include\QtWidgets;;../../x64-windows-static\include\QtCore;;../../x64-windows-static/include/QtGui;../../x64-windows-static\include\QtNetwork</AdditionalIncludeDirectories>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\interfaces\wallet.cpp">
+      <ObjectFileName>$(IntDir)interfaces_wallet.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wallet\bdb.cpp">
+      <ObjectFileName>$(IntDir)wallet_bdb.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wallet\coincontrol.cpp">
+      <ObjectFileName>$(IntDir)wallet_coincontrol.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wallet\context.cpp">
+      <ObjectFileName>$(IntDir)wallet_context.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wallet\crypter.cpp">
+      <ObjectFileName>$(IntDir)wallet_crypter.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wallet\db.cpp">
+      <ObjectFileName>$(IntDir)wallet_db.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wallet\feebumper.cpp">
+      <ObjectFileName>$(IntDir)wallet_feebumper.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wallet\fees.cpp">
+      <ObjectFileName>$(IntDir)wallet_fees.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wallet\load.cpp">
+      <ObjectFileName>$(IntDir)wallet_load.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wallet\rpcdump.cpp">
+      <ObjectFileName>$(IntDir)wallet_rpcdump.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wallet\rpcwallet.cpp">
+      <ObjectFileName>$(IntDir)wallet_rpcwallet.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wallet\salvage.cpp">
+      <ObjectFileName>$(IntDir)wallet_salvage.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wallet\scriptpubkeyman.cpp">
+      <ObjectFileName>$(IntDir)wallet_scriptpubkeyman.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wallet\wallet.cpp">
+      <ObjectFileName>$(IntDir)wallet_wallet.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wallet\walletdb.cpp">
+      <ObjectFileName>$(IntDir)wallet_walletdb.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wallet\walletutil.cpp">
+      <ObjectFileName>$(IntDir)wallet_walletutil.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wallet\coinselection.cpp">
+      <ObjectFileName>$(IntDir)wallet_coinselection.obj</ObjectFileName>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="..\common.vcxproj" />
+</Project>

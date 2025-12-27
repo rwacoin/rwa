@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\common.init.vcxproj" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6190199C-6CF4-4DAD-BFBD-93FA72A760C1}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\src;..\..\src\univalue\include;..\..\src\secp256k1\include;..\..\src\leveldb\include;..\..\src\leveldb\helpers\memenv;%(AdditionalIncludeDirectories);../../x64-windows-static/include;;../../x64-windows-static/include;</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\src;..\..\src\univalue\include;..\..\src\secp256k1\include;..\..\src\leveldb\include;..\..\src\leveldb\helpers\memenv;%(AdditionalIncludeDirectories);../../x64-windows-static/include;</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\src;..\..\src\univalue\include;..\..\src\secp256k1\include;..\..\src\leveldb\include;..\..\src\leveldb\helpers\memenv;%(AdditionalIncludeDirectories);../../x64-windows-static/include;</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\src;..\..\src\univalue\include;..\..\src\secp256k1\include;..\..\src\leveldb\include;..\..\src\leveldb\helpers\memenv;%(AdditionalIncludeDirectories);../../x64-windows-static/include;;../../x64-windows-static\include\QtWidgets;;../../x64-windows-static\include\QtCore;;../../x64-windows-static/include/QtGui;../../x64-windows-static\include\QtNetwork</AdditionalIncludeDirectories>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\crypto\aes.cpp">
+      <ObjectFileName>$(IntDir)crypto_aes.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\chacha_poly_aead.cpp">
+      <ObjectFileName>$(IntDir)crypto_chacha_poly_aead.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\chacha20.cpp">
+      <ObjectFileName>$(IntDir)crypto_chacha20.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\hkdf_sha256_32.cpp">
+      <ObjectFileName>$(IntDir)crypto_hkdf_sha256_32.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\hmac_sha256.cpp">
+      <ObjectFileName>$(IntDir)crypto_hmac_sha256.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\hmac_sha512.cpp">
+      <ObjectFileName>$(IntDir)crypto_hmac_sha512.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\poly1305.cpp">
+      <ObjectFileName>$(IntDir)crypto_poly1305.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\ripemd160.cpp">
+      <ObjectFileName>$(IntDir)crypto_ripemd160.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\sha1.cpp">
+      <ObjectFileName>$(IntDir)crypto_sha1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\sha256.cpp">
+      <ObjectFileName>$(IntDir)crypto_sha256.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\sha3.cpp">
+      <ObjectFileName>$(IntDir)crypto_sha3.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\sha512.cpp">
+      <ObjectFileName>$(IntDir)crypto_sha512.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\crypto\siphash.cpp">
+      <ObjectFileName>$(IntDir)crypto_siphash.obj</ObjectFileName>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="..\common.vcxproj" />
+</Project>

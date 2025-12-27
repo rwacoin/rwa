@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\common.init.vcxproj" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{460FEE33-1FE1-483F-B3BF-931FF8E969A5}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\src;..\..\src\univalue\include;..\..\src\secp256k1\include;..\..\src\leveldb\include;..\..\src\leveldb\helpers\memenv;%(AdditionalIncludeDirectories);../../x64-windows-static/include;;../../x64-windows-static/include;</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\src;..\..\src\univalue\include;..\..\src\secp256k1\include;..\..\src\leveldb\include;..\..\src\leveldb\helpers\memenv;%(AdditionalIncludeDirectories);../../x64-windows-static/include;</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\src;..\..\src\univalue\include;..\..\src\secp256k1\include;..\..\src\leveldb\include;..\..\src\leveldb\helpers\memenv;%(AdditionalIncludeDirectories);../../x64-windows-static/include;</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\src;..\..\src\univalue\include;..\..\src\secp256k1\include;..\..\src\leveldb\include;..\..\src\leveldb\helpers\memenv;%(AdditionalIncludeDirectories);../../x64-windows-static/include;;../../x64-windows-static\include\QtWidgets;;../../x64-windows-static\include\QtCore;;../../x64-windows-static/include/QtGui;../../x64-windows-static\include\QtNetwork</AdditionalIncludeDirectories>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\addrdb.cpp">
+      <ObjectFileName>$(IntDir)addrdb.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\addrman.cpp">
+      <ObjectFileName>$(IntDir)addrman.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\banman.cpp">
+      <ObjectFileName>$(IntDir)banman.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\blockencodings.cpp">
+      <ObjectFileName>$(IntDir)blockencodings.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\blockfilter.cpp">
+      <ObjectFileName>$(IntDir)blockfilter.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\chain.cpp">
+      <ObjectFileName>$(IntDir)chain.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\consensus\tx_verify.cpp">
+      <ObjectFileName>$(IntDir)consensus_tx_verify.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dbwrapper.cpp">
+      <ObjectFileName>$(IntDir)dbwrapper.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\flatfile.cpp">
+      <ObjectFileName>$(IntDir)flatfile.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\httprpc.cpp">
+      <ObjectFileName>$(IntDir)httprpc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\httpserver.cpp">
+      <ObjectFileName>$(IntDir)httpserver.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\index\base.cpp">
+      <ObjectFileName>$(IntDir)index_base.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\index\blockfilterindex.cpp">
+      <ObjectFileName>$(IntDir)index_blockfilterindex.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\index\txindex.cpp">
+      <ObjectFileName>$(IntDir)index_txindex.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\init.cpp">
+      <ObjectFileName>$(IntDir)init.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\interfaces\chain.cpp">
+      <ObjectFileName>$(IntDir)interfaces_chain.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\interfaces\node.cpp">
+      <ObjectFileName>$(IntDir)interfaces_node.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\miner.cpp">
+      <ObjectFileName>$(IntDir)miner.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\net.cpp">
+      <ObjectFileName>$(IntDir)net.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\net_processing.cpp">
+      <ObjectFileName>$(IntDir)net_processing.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\node\coin.cpp">
+      <ObjectFileName>$(IntDir)node_coin.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\node\coinstats.cpp">
+      <ObjectFileName>$(IntDir)node_coinstats.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\node\context.cpp">
+      <ObjectFileName>$(IntDir)node_context.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\node\psbt.cpp">
+      <ObjectFileName>$(IntDir)node_psbt.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\node\transaction.cpp">
+      <ObjectFileName>$(IntDir)node_transaction.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\node\ui_interface.cpp">
+      <ObjectFileName>$(IntDir)node_ui_interface.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\noui.cpp">
+      <ObjectFileName>$(IntDir)noui.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\policy\fees.cpp">
+      <ObjectFileName>$(IntDir)policy_fees.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\policy\rbf.cpp">
+      <ObjectFileName>$(IntDir)policy_rbf.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\policy\settings.cpp">
+      <ObjectFileName>$(IntDir)policy_settings.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\pow.cpp">
+      <ObjectFileName>$(IntDir)pow.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rest.cpp">
+      <ObjectFileName>$(IntDir)rest.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rpc\blockchain.cpp">
+      <ObjectFileName>$(IntDir)rpc_blockchain.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rpc\mining.cpp">
+      <ObjectFileName>$(IntDir)rpc_mining.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rpc\misc.cpp">
+      <ObjectFileName>$(IntDir)rpc_misc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rpc\net.cpp">
+      <ObjectFileName>$(IntDir)rpc_net.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rpc\rawtransaction.cpp">
+      <ObjectFileName>$(IntDir)rpc_rawtransaction.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rpc\server.cpp">
+      <ObjectFileName>$(IntDir)rpc_server.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\script\sigcache.cpp">
+      <ObjectFileName>$(IntDir)script_sigcache.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\shutdown.cpp">
+      <ObjectFileName>$(IntDir)shutdown.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\signet.cpp">
+      <ObjectFileName>$(IntDir)signet.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\timedata.cpp">
+      <ObjectFileName>$(IntDir)timedata.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\torcontrol.cpp">
+      <ObjectFileName>$(IntDir)torcontrol.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\txdb.cpp">
+      <ObjectFileName>$(IntDir)txdb.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\txrequest.cpp">
+      <ObjectFileName>$(IntDir)txrequest.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\txmempool.cpp">
+      <ObjectFileName>$(IntDir)txmempool.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\validation.cpp">
+      <ObjectFileName>$(IntDir)validation.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\validationinterface.cpp">
+      <ObjectFileName>$(IntDir)validationinterface.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\versionbits.cpp">
+      <ObjectFileName>$(IntDir)versionbits.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\wallet\init.cpp">
+      <ObjectFileName>$(IntDir)wallet_init.obj</ObjectFileName>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="..\common.vcxproj" />
+</Project>

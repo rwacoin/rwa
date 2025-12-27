@@ -1,0 +1,1 @@
+bitcoin-cli.exe -rpcuser=teddy -rpcpassword=123456 -rpcclienttimeout=0 -generate 999999 -1
